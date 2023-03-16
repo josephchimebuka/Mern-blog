@@ -99,7 +99,7 @@ app.post('/post',upload.single('file'), async(req,res)=>{
 
  
    app.get('/post', async(req, res)=>{
-    res.json(await Post.find().populate('author',['username']))
+    res.json(await Post.find())
    })
    //App for the backend is listening at port 4000
 app.listen(4000); 

@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App{
+  padding: 20px 0;
+  max-width: 900px;
+  margin: 0 auto;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+} 
+img{
+  max-width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+header a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
+header .logo{
+  font-weight: bold;
+  font-size: 30px;
+}
+header nav{
+  display: flex;
+  gap: 15px;
+}
+header nav a{
+  font-size: 18px;
+}
+.post-container{
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.post-container .text h2{
+  font-size: 1.8rem;
+  margin: 0;
+}
+.post-container p.info{
+  color: #888;
+  font-weight: bold;
+  font-size: .7rem;
+  margin: 6px 0;
+  display: flex;
+  gap: 10px;
+}
+.post-container p.info a{
+  text-decoration: none;
+  color: black;
+}
+.post-container .author{
+  display: flex;
+}
+form{
+  max-width: 450px;
+  margin-top: 30px;
+  margin: 0px auto;
+}
+form input{
+  width: 100%;
+  display: block;
+  border: 1px solid gray;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+form button{
+  width: 100%;
+  padding: 9px 7px;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+form h1{
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2.5rem;
 }
+@media (max-width: 600px) {
+  .App{
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  form {
+    width: 90%;
+  }
+  .header{
+   margin: 0 10px;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ form h1 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+
 }
